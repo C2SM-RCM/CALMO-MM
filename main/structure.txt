@@ -1,0 +1,43 @@
+main.m
+	% Read observations and simulations data, then fit the Meta-Models:
+	ReadData_and_MetaModel.m
+		% choose parameters to be tuned:
+		sims_def.m
+			expval_inter_combs.m 
+		% Read observations:
+		read_calmo_obs.m
+			build_temp_obs.m
+			build_rain_obs.m
+			var_meta_calmo.m
+			read_sounding_obs.m
+				get_press_levs.m
+		% Read simulations:
+		read_calmo_sim.m
+			var_meta_calmo.m
+			read_profiles_mod.m
+				get_press_levs.m
+		Frei_regions.m
+			regions_bmp.m
+		gpts_series.m
+		corr_so.m
+		del_bad_sounding_obs.m
+		neelin_e.m
+			allcomb.m
+			polyfitn.m
+	PostProc.m
+		sims_def.m
+		weights_calc.m
+			ETS.m
+		planes.m
+			allcomb.m
+			divisor.m
+			neelin_p.m
+			rmse_calc.m
+			cosi_calc.m
+				ETS.m
+		lhopt.m
+			neelin_p.m
+		histplot.m
+		optparam.m
+			allcomb.m
+		log_turlen_entrsc.m
